@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "8de72e94-288b-48eb-ae77-9bd1b331db8f",
+		"name": "Project-3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20527530"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mr\",\r\n    \"name\": \"Shayan Biswas\",\r\n    \"phone\":\"9111111111\",\r\n    \"email\": \"sb@gmail.co\",\r\n    \"password\": \"Shayan@1\",\r\n    \"address\": {\r\n        \"street\": \"NH33\",\r\n        \"city\": \"Murshidabad\",\r\n        \"pincode\": \"774444\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sb@gmail.co\",\r\n    \"password\": \"Shayan@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM0MjFiZGIwYTJiMjBmYTAxNDA5YzMiLCJpYXQiOjE2NjQzNjExOTQsImV4cCI6MTY5NTg5NzE5NH0.6zvTdlp08pGtoqEYRF0ZlB0Zsoz4n6nBUfH2gACIvU4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Hello World\",\r\n    \"excerpt\": \"Web devlopment.\",\r\n    \"userId\": \"633421bdb0a2b20fa01409c3\",\r\n    \"ISBN\": \"1111111111111\",\r\n    \"category\": \"Programming\",\r\n    \"subcategory\": \"Coding\",\r\n    \"releasedAt\": \"2022-09-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBooksQuery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM0MjFiZGIwYTJiMjBmYTAxNDA5YzMiLCJpYXQiOjE2NjQzNjExOTQsImV4cCI6MTY5NTg5NzE5NH0.6zvTdlp08pGtoqEYRF0ZlB0Zsoz4n6nBUfH2gACIvU4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBookById",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM0MjFiZGIwYTJiMjBmYTAxNDA5YzMiLCJpYXQiOjE2NjQzNjExOTQsImV4cCI6MTY5NTg5NzE5NH0.6zvTdlp08pGtoqEYRF0ZlB0Zsoz4n6nBUfH2gACIvU4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"Shayan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBookById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM0MjFiZGIwYTJiMjBmYTAxNDA5YzMiLCJpYXQiOjE2NjQzNjExOTQsImV4cCI6MTY5NTg5NzE5NH0.6zvTdlp08pGtoqEYRF0ZlB0Zsoz4n6nBUfH2gACIvU4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addReview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reviewedBy\": \"Shayan Biswas\",\r\n    \"rating\": 5,\r\n    \"review\": \"very good\",\r\n    \"reviewedAt\": \"2022-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29/review",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateReview",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"review\": \"I can recommend u 1000 time\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29/review/6334295e9e23bb6c109d5ed7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29",
+						"review",
+						"6334295e9e23bb6c109d5ed7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReview",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/books/6334250bc47f398c4b7f3d29/review/6334295e9e23bb6c109d5ed7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"6334250bc47f398c4b7f3d29",
+						"review",
+						"6334295e9e23bb6c109d5ed7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
